@@ -32,7 +32,7 @@ function App() {
     }
   
     dataArtists.sort((a, b) => {
-        return b.songs.length - a.songs.length;
+        return b.minPlayed - a.minPlayed;
     })
     
     console.log(dataArtists.slice(0, 200));
@@ -44,7 +44,7 @@ function App() {
   const list = dataArtists.map((item, index) => {
     return (
       <li key={ index }>
-        { `${item.artistName} : ${item.songs.length} songs / ${item.minPlayed.toFixed(0)} minutes`}
+        { `${item.artistName} : ${item.minPlayed.toFixed(0)} minutes . ${item.songs.length} songs`}
       </li>
     )
   })
