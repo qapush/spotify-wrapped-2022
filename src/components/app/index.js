@@ -44,7 +44,7 @@ function App() {
   const list = dataArtists.map((item, index) => {
     return (
       <li key={ index }>
-        { `${item.artistName} : ${item.minPlayed.toFixed(0)} minutes . ${item.songs.length} songs`}
+        { `${item.artistName} : ${item.minPlayed.toFixed(0)} minutes / ${item.songs.length} songs`}
       </li>
     )
   })
