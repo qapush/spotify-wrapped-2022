@@ -9,6 +9,8 @@ function App() {
     const dataArtists = [];
   
       for (let i = 0; i < data.length; i++) {
+
+      if(data[i].msPlayed < 60000) continue;
       
       if (!dataArtists.some( artist => artist.artistName === data[i].artistName )) {
         
@@ -20,6 +22,7 @@ function App() {
           minPlayed: minutes
         });
       } else if (dataArtists.some( artist => artist.artistName === data[i].artistName )) {
+        
         const index = dataArtists.findIndex(elem => {
           return elem.artistName === data[i].artistName;
         })
@@ -35,9 +38,9 @@ function App() {
         return b.minPlayed - a.minPlayed;
     })
     
-    console.log(dataArtists.slice(0, 200));
+    console.log(dataArtists);
       
-    return dataArtists.slice(0, 200);
+    return dataArtists;
   }
 
   const dataArtists = useMemo(() => getDataArtists(data), [data])
