@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/spotify-wrapped-2022/static/css/main.be27a9e0.css",
-    "main.js": "/spotify-wrapped-2022/static/js/main.096a33cf.js",
+    "main.css": "/spotify-wrapped-2022/static/css/main.099a7253.css",
+    "main.js": "/spotify-wrapped-2022/static/js/main.abc39861.js",
     "index.html": "/spotify-wrapped-2022/index.html",
-    "main.be27a9e0.css.map": "/spotify-wrapped-2022/static/css/main.be27a9e0.css.map",
-    "main.096a33cf.js.map": "/spotify-wrapped-2022/static/js/main.096a33cf.js.map"
+    "main.099a7253.css.map": "/spotify-wrapped-2022/static/css/main.099a7253.css.map",
+    "main.abc39861.js.map": "/spotify-wrapped-2022/static/js/main.abc39861.js.map"
   },
   "entrypoints": [
-    "static/css/main.be27a9e0.css",
-    "static/js/main.096a33cf.js"
+    "static/css/main.099a7253.css",
+    "static/js/main.abc39861.js"
   ]
 }
