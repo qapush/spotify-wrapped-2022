@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState, useCallback } from 'react';
 import { getData } from '../../utils';
 import { useParams } from 'react-router-dom';
+import ArtistList from '../ArtistList';
 
 function App() {
 
@@ -11,19 +12,14 @@ function App() {
 
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await getData(id);
-      console.log(data)
-      setRawData(data);
-   }
- 
-   fetchData();
+    getData(id)
+      .then(data => setRawData(data))
   }, [])
 
 
   return (
     <div className="App">
-     list here
+      { rawData.length > 0 ? <ArtistList data={rawData}/> : 'no data' }
     </div>
   );
 }

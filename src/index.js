@@ -3,22 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/app';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 root.render(
-<Router>
-  <React.StrictMode>
+<React.StrictMode>
+  <Router basename='spotify-wrapped-2022'>
       <Switch>
         <Route path="/:id" children={<App />} />
         <Route path="/">
           <App />
         </Route>
       </Switch>
-  </React.StrictMode>
-</Router>
+  </Router>
+</React.StrictMode>
 );

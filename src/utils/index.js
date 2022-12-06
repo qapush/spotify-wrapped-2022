@@ -1,8 +1,8 @@
-const getData = async (id) => {
+const getData = (id) => {
 
   const filename = id ? id : 'history';
 
-  fetch(`${process.env.PUBLIC_URL}/${filename}.json`)
+  return fetch(`${process.env.PUBLIC_URL}/${filename}.json`)
       .then(res => res.json())
     .then(data => {
       const result = uniqueArtists(data);
@@ -42,7 +42,6 @@ const uniqueArtists = (data) => {
           }
           
         }
-  // console.log(result);
   return result;
 }
 
