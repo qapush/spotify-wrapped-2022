@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
 <React.StrictMode>
-  <Router basename='spotify-wrapped-2022'>
+  <Router basename='spotify-wrapped-2022' hashType='noslash'>
       <Switch>
         <Route path="/:id" children={<App />} />
         <Route path="/">
